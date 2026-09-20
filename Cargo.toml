@@ -1,0 +1,21 @@
+[package]
+name = "file-converter-hub"
+version = "1.0.0"
+edition = "2021"
+description = "Safe local CLI for practical text and data file conversions"
+authors = ["Radwan Abdulhadi Ahmed <@rad03i2>"]
+license = "MIT"
+repository = "https://github.com/rad03i2/file-converter-hub"
+keywords = ["converter", "csv", "json", "text", "cli"]
+categories = ["command-line-utilities", "text-processing"]
+
+[[bin]]
+name = "file-converter"
+path = "src/main.rs"
+
+[dependencies]
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
